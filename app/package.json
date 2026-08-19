@@ -1,0 +1,15 @@
+{
+  "name": "task-manager-api",
+  "version": "1.0.0",
+  "description": "Production 2-Tier Node.js API with AWS Secrets Manager and RDS MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.500.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.2"
+  }
+}
