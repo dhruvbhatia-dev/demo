@@ -47,7 +47,7 @@ jobs:
 
       run: |
         docker build -t ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}/${{ env.IMAGE_TAG }} .
-        docker tag ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest 
+        docker tag ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}:${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest 
     
     - name: Run Trivy Vulnerability Scanner
       uses: aquasecurity/trivy-action@master
