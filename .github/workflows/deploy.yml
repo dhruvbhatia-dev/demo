@@ -71,7 +71,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          aws ecr get-login-password --reion ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ steps.login-ecr.outputs.registry }}
+          aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ steps.login-ecr.outputs.registry }}
           docker pull ${{ steps.login-ecr.outputs.registry }}/${{env.ECR_REPOSITORY }}:latest
           docker stop app-container || true
           docker rm app-container || true
