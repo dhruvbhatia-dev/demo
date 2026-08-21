@@ -127,7 +127,7 @@ resource "aws_iam_role_policy_attachment" "attach_secret_policy" {
 }
 
 resource "aws_iam_role_policy_attachment" "attach_ecr" {
-  role = aws_iam_role.ec2_role.name
+  role       = aws_iam_role.ec2_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 }
 
