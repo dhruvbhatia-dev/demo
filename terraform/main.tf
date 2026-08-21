@@ -82,7 +82,7 @@ resource "aws_secretsmanager_secret_version" "db_secret_val" {
   secret_id     = aws_secretsmanager_secret.db_secret.id
   secret_string = jsonencode({
     host = aws_db_instance.mysql_rds.address
-    username = var.db_name
+    username = var.db_username
     password = var.db_password
     dbname = var.db_name
     port = 3306
