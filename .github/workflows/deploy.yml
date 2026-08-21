@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: ap-south-1
   ECR_REPOSITORY: node-app
-  TARGET_EC2_IP:
+  TARGET_EC2_IP: 3.109.211.38
   IMAGE_TAG: ${{ github.sha }} 
 
 jobs:
